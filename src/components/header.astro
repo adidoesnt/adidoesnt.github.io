@@ -1,0 +1,19 @@
+---
+import { PAGE, getPath } from '@constants/navigation';
+import NavigationBar from './navigationBar.astro';
+import Hamburger from './hamburger.astro';
+const { heading } = Astro.props;
+const { HOME } = PAGE;
+---
+
+<div class="flex w-full h-full justify-between px-8 md:px-24 py-8">
+    <div class="flex h-full items-center">
+        <a href={getPath(HOME)}>
+            <h1 class="text-xl md:text-2xl font-bold">{heading}</h1>
+        </a>
+    </div>
+    <div class="flex h-full items-center">
+        <NavigationBar />
+        <Hamburger />
+    </div>
+</div>

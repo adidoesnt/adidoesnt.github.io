@@ -1,0 +1,31 @@
+---
+import Layout from '@layouts/index.astro';
+import { Content as Education } from '@content/resume/education.md';
+import { Content as Experience } from '@content/resume/work.md';
+import { Content as Achievements } from '@content/resume/achievements.md';
+import { Content as Skills } from '@content/resume/skills.md';
+import { Content as Languages } from '@content/resume/languages.md';
+import '@styles/resume.module.css';
+---
+
+<Layout title="Aditya Banerjee - About">
+    <div
+        class="flex flex-col w-full gap-8 items-center text-center px-[12.5%] overflow-y-auto"
+    >
+        <div>
+            <Education />
+        </div>
+        <div>
+            <Experience />
+        </div>
+        <div>
+            <Achievements />
+        </div>
+        <div>
+            <Skills />
+        </div>
+        <div>
+            <Languages />
+        </div>
+    </div>
+</Layout>

@@ -1,0 +1,17 @@
+---
+import { pages, getName, getPath } from '@constants/navigation';
+---
+
+<div class="hidden lg:flex w-full h-full items-center gap-8">
+    {
+        pages.map((page) => {
+            const name = getName(page);
+            const path = getPath(page);
+            return (
+                <a href={path}>
+                    <span>{name}</span>
+                </a>
+            );
+        })
+    }
+</div>

@@ -1,0 +1,34 @@
+---
+import { pages, getName, getPath } from '@constants/navigation';
+---
+
+<script>
+    const closeHamburgerButton = document.getElementById(
+        'closeHamburgerButton'
+    );
+    const toggleHamburger = () => {
+        const mobileNav = document.getElementById('mobileNav');
+        mobileNav?.classList.toggle('hidden');
+        mobileNav?.classList.toggle('flex');
+    };
+    closeHamburgerButton?.addEventListener('click', toggleHamburger);
+</script>
+<div
+    id="mobileNav"
+    class="hidden fixed flex-col inset-0 items-center justify-center z-10 bg-[#161923] bg-opacity-75 backdrop-blur-md text-center"
+>
+    {
+        pages.map((page) => {
+            const name = getName(page);
+            const path = getPath(page);
+            return (
+                <a href={path}>
+                    <span>{name}</span>
+                </a>
+            );
+        })
+    }
+    <button id="closeHamburgerButton" class="absolute right-0 top-0 m-10">
+        Close
+    </button>
+</div>
