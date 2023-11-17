@@ -1,7 +1,7 @@
 ---
 import { PAGE, getPath } from '@constants/navigation';
 import NavigationBar from './navigationBar.astro';
-import Hamburger from './hamburger.astro';
+import { HamburgerMenu } from './hamburger.tsx';
 const { heading } = Astro.props;
 const { HOME } = PAGE;
 ---
@@ -14,6 +14,6 @@ const { HOME } = PAGE;
     </div>
     <div class="flex h-full items-center">
         <NavigationBar />
-        <Hamburger />
+        <HamburgerMenu client:only="react" />
     </div>
 </div>
