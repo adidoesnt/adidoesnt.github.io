@@ -9,7 +9,12 @@ export const Linkedin = () => {
         <div className="h-[45px] md:h-[60px]">
             <a href={(LINKEDIN as unknown as string) ?? ''} target="_blank">
                 {isIOS ? (
-                    <img src={linkedin.src} alt="Linkedin Icon" />
+                    <img
+                        src={linkedin.src}
+                        alt="Linkedin Icon"
+                        width="auto"
+                        height="auto"
+                    />
                 ) : (
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

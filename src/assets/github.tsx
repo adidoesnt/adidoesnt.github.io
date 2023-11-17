@@ -9,7 +9,12 @@ export const Github = () => {
         <div className="h-[45px] md:h-[60px]">
             <a href={(GITHUB as unknown as string) ?? ''} target="_blank">
                 {isIOS ? (
-                    <img src={github.src} alt="Github Icon" />
+                    <img
+                        src={github.src}
+                        alt="Github Icon"
+                        width="auto"
+                        height="auto"
+                    />
                 ) : (
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

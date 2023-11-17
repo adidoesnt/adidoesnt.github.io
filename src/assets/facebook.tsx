@@ -9,7 +9,12 @@ export const Facebook = () => {
         <div className="h-[45px] md:h-[60px]">
             <a href={(FACEBOOK as unknown as string) ?? ''} target="_blank">
                 {isIOS ? (
-                    <img src={facebook.src} alt="Facebook Icon" />
+                    <img
+                        src={facebook.src}
+                        alt="Facebook Icon"
+                        width="auto"
+                        height="auto"
+                    />
                 ) : (
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

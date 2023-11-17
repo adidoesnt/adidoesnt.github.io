@@ -9,7 +9,12 @@ export const Gmail = () => {
         <div className="h-[45px] md:h-[60px]">
             <a href={(EMAIL as unknown as string) ?? ''}>
                 {isIOS ? (
-                    <img src={gmail.src} alt="Gmail Icon" />
+                    <img
+                        src={gmail.src}
+                        alt="Gmail Icon"
+                        width="auto"
+                        height="auto"
+                    />
                 ) : (
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

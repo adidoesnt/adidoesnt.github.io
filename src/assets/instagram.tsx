@@ -9,7 +9,12 @@ export const Instagram = () => {
         <div className="h-[45px] md:h-[60px]">
             <a href={(INSTAGRAM as unknown as string) ?? ''} target="_blank">
                 {isIOS ? (
-                    <img src={instagram.src} alt="Gmail Icon" />
+                    <img
+                        src={instagram.src}
+                        alt="Gmail Icon"
+                        width="auto"
+                        height="auto"
+                    />
                 ) : (
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
