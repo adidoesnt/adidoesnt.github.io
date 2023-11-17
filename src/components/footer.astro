@@ -6,16 +6,10 @@ import {
     Email,
     Linkedin
 } from '@assets/index.ts';
-import { SOCIALS } from '@constants/navigation';
-const { FACEBOOK } = SOCIALS;
 ---
 
 <div class="flex justify-evenly items-center w-full h-full py-8">
-    <div class="h-[45px] md:h-[60px]">
-        <a href={(FACEBOOK as unknown as string) ?? ''} target="_blank">
-            <Facebook client:only="react" />
-        </a>
-    </div>
+    <Facebook client:only="react" />
     <Github client:only="react" />
     <Email client:only="react" />
     <Instagram client:only="react" />
