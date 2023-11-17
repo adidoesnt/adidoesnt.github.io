@@ -12,8 +12,7 @@ export const Facebook = () => {
                     <img
                         src={facebook.src}
                         alt="Facebook Icon"
-                        width="auto"
-                        height="auto"
+                        className='h-[45px] md:h-[60px]'
                     />
                 ) : (
                     <svg

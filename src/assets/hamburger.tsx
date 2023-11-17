@@ -7,8 +7,7 @@ export const Hamburger = () => {
         <img
             src={hamburger.src}
             alt="Hamburger Menu Icon"
-            width="auto"
-            height="auto"
+            className="h-[30px] md:h-[40px]"
         />
     ) : (
         <svg

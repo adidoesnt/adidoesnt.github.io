@@ -12,8 +12,7 @@ export const Github = () => {
                     <img
                         src={github.src}
                         alt="Github Icon"
-                        width="auto"
-                        height="auto"
+                        className='h-[45px] md:h-[60px]'
                     />
                 ) : (
                     <svg
