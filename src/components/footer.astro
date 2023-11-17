@@ -1,15 +1,17 @@
 ---
-import Facebook from '@assets/facebook.astro';
-import Github from '@assets/github.astro';
-import Gmail from '@assets/gmail.astro';
-import Instagram from '@assets/instagram.astro';
-import Linkedin from '@assets/linkedin.astro';
+import {
+    Facebook,
+    Instagram,
+    Github,
+    Email,
+    Linkedin
+} from '@assets/index.ts';
 ---
 
 <div class="flex justify-evenly items-center w-full h-full py-8">
-    <Facebook />
-    <Github />
-    <Gmail />
-    <Instagram />
-    <Linkedin />
+    <Facebook client:only="react" />
+    <Github client:only="react" />
+    <Email client:only="react" />
+    <Instagram client:only="react" />
+    <Linkedin client:only="react" />
 </div>
