@@ -5,7 +5,7 @@
     "types": [
       "bun-types"
     ],
-    "baseUrl": "/Users/aditya/Desktop/Repositories/misc/adidoesnt.github.io/src",
+    "baseUrl": "src",
     "paths": {
       "@components/*": [
         "components/*"
