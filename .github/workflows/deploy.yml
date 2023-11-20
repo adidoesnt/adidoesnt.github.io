@@ -11,6 +11,9 @@ env:
   PUBLIC_EMAIL: ${{ vars.PUBLIC_EMAIL }}
   PUBLIC_INSTAGRAM_URL: ${{ vars.PUBLIC_INSTAGRAM_URL }}
   PUBLIC_LINKEDIN_URL: ${{ vars.PUBLIC_LINKEDIN_URL }}
+  GH_USERNAME: ${{ vars.GH_USERNAME }}
+  GH_REPOS_PER_PAGE: ${{ vars.GH_REPOS_PER_PAGE }}
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
 permissions:
   contents: read
