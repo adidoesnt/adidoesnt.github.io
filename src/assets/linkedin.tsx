@@ -11,7 +11,7 @@ export const Linkedin = () => {
                     <img
                         src={linkedin.src}
                         alt="Linkedin Icon"
-                        className='h-[45px] md:h-[60px]'
+                        className="h-[45px] md:h-[60px]"
                     />
                 ) : (
                     <svg

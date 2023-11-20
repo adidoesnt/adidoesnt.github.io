@@ -11,7 +11,7 @@ export const Instagram = () => {
                     <img
                         src={instagram.src}
                         alt="Gmail Icon"
-                        className='h-[45px] md:h-[60px]'
+                        className="h-[45px] md:h-[60px]"
                     />
                 ) : (
                     <svg

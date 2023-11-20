@@ -1,43 +1,43 @@
 {
-  "name": "adityabanerjee-v4",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "bunx --bun astro dev",
-    "start": "bunx --bun astro dev",
-    "build": "bunx --bun astro check && bunx --bun astro build",
-    "preview": "bunx --bun astro preview",
-    "astro": "bunx --bun astro",
-    "format": "prettier --write --plugin=prettier-plugin-astro '**/*.{js,jsx,ts,tsx,css,scss,json,md,astro}'"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.3.1",
-    "@astrojs/mdx": "^1.1.5",
-    "@astrojs/node": "^6.0.4",
-    "@astrojs/react": "^3.0.5",
-    "@astrojs/tailwind": "^5.0.2",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
-    "astro": "^3.5.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^3.0.24",
-    "typescript": "^5.2.2"
-  },
-  "_moduleAliases": {
-    "@layouts": "src/layouts",
-    "@components": "src/components",
-    "@content": "src/content",
-    "@pages": "src/pages",
-    "@api": "src/pages/api",
-    "@assets": "src/assets",
-    "@styles": "src/styles",
-    "@constants": "src/constants",
-    "@utils": "src/utils"
-  },
-  "devDependencies": {
-    "bun-types": "^1.0.13",
-    "prettier": "^3.1.0",
-    "prettier-plugin-astro": "^0.12.2"
-  }
+    "name": "adityabanerjee-v4",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "bunx --bun astro dev",
+        "start": "bunx --bun astro dev",
+        "build": "bunx --bun astro check && bunx --bun astro build",
+        "preview": "bunx --bun astro preview",
+        "astro": "bunx --bun astro",
+        "format": "prettier --write --plugin=prettier-plugin-astro '**/*.{js,jsx,ts,tsx,css,scss,json,md,astro}'"
+    },
+    "dependencies": {
+        "@astrojs/check": "^0.3.1",
+        "@astrojs/mdx": "^1.1.5",
+        "@astrojs/node": "^6.0.4",
+        "@astrojs/react": "^3.0.5",
+        "@astrojs/tailwind": "^5.0.2",
+        "@types/react": "^18.0.21",
+        "@types/react-dom": "^18.0.6",
+        "astro": "^3.5.5",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "tailwindcss": "^3.0.24",
+        "typescript": "^5.2.2"
+    },
+    "_moduleAliases": {
+        "@layouts": "src/layouts",
+        "@components": "src/components",
+        "@content": "src/content",
+        "@pages": "src/pages",
+        "@api": "src/pages/api",
+        "@assets": "src/assets",
+        "@styles": "src/styles",
+        "@constants": "src/constants",
+        "@utils": "src/utils"
+    },
+    "devDependencies": {
+        "bun-types": "^1.0.13",
+        "prettier": "^3.1.0",
+        "prettier-plugin-astro": "^0.12.2"
+    }
 }

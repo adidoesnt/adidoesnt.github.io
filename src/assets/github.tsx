@@ -11,7 +11,7 @@ export const Github = () => {
                     <img
                         src={github.src}
                         alt="Github Icon"
-                        className='h-[45px] md:h-[60px]'
+                        className="h-[45px] md:h-[60px]"
                     />
                 ) : (
                     <svg
