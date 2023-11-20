@@ -13,7 +13,7 @@ export default defineConfig({
     }),
     base: "/",
     build: {
-      client: './client',
-      server: "./sever"
+      client: './dist/client',
+      server: "./dist/server"
     }
 });
