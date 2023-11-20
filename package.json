@@ -3,11 +3,11 @@
     "type": "module",
     "version": "0.0.1",
     "scripts": {
-        "dev": "astro dev",
-        "start": "astro dev",
-        "build": "astro check && astro build",
-        "preview": "astro preview",
-        "astro": "astro",
+        "dev": "bunx --bun astro dev",
+        "start": "bunx --bun astro dev",
+        "build": "bunx --bun astro check && bunx --bun astro build",
+        "preview": "bunx --bun astro preview",
+        "astro": "bun --bunx astro",
         "format": "prettier --write --plugin=prettier-plugin-astro '**/*.{js,jsx,ts,tsx,css,scss,json,md,astro}'"
     },
     "dependencies": {
@@ -37,5 +37,8 @@
         "bun-types": "^1.0.12",
         "prettier": "^3.1.0",
         "prettier-plugin-astro": "^0.12.2"
+    },
+    "engines": {
+        "node": "18"
     }
 }
