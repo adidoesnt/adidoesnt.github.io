@@ -1,14 +1,13 @@
 import { SOCIALS } from '@constants/navigation';
 import linkedin from './fallbacks/linkedin.png';
+import { isApple } from '@utils/agent';
 const { LINKEDIN } = SOCIALS;
 
 export const Linkedin = () => {
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-
     return (
         <div className="h-[45px] md:h-[60px]">
             <a href={(LINKEDIN as unknown as string) ?? ''} target="_blank">
-                {isIOS ? (
+                {isApple ? (
                     <img
                         src={linkedin.src}
                         alt="Linkedin Icon"

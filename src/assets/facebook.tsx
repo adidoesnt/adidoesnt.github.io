@@ -1,18 +1,17 @@
 import { SOCIALS } from '@constants/navigation';
 import facebook from './fallbacks/facebook.png';
+import { isApple } from '@utils/agent';
 const { FACEBOOK } = SOCIALS;
 
 export const Facebook = () => {
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-
     return (
         <div className="h-[45px] md:h-[60px]">
             <a href={(FACEBOOK as unknown as string) ?? ''} target="_blank">
-                {isIOS ? (
+                {isApple ? (
                     <img
                         src={facebook.src}
                         alt="Facebook Icon"
-                        className='h-[45px] md:h-[60px]'
+                        className="h-[45px] md:h-[60px]"
                     />
                 ) : (
                     <svg

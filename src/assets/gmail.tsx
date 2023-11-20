@@ -1,14 +1,13 @@
 import { SOCIALS } from '@constants/navigation';
 import gmail from './fallbacks/gmail.png';
+import { isApple } from '@utils/agent';
 const { EMAIL } = SOCIALS;
 
 export const Gmail = () => {
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-
     return (
         <div className="h-[45px] md:h-[60px]">
             <a href={(EMAIL as unknown as string) ?? ''}>
-                {isIOS ? (
+                {isApple ? (
                     <img
                         src={gmail.src}
                         alt="Gmail Icon"

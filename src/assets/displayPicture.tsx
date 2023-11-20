@@ -1,5 +1,16 @@
+import { isApple } from '@utils/agent';
+import dp from './fallbacks/displayPicture.jpg';
+
 export const DisplayPicture = () => {
-    return (
+    return isApple ? (
+        <img
+            src={dp.src}
+            alt="Display Picture"
+            width="auto"
+            height="auto"
+            className="rounded-[50%] max-h-[300px] border-white border-[1px]"
+        />
+    ) : (
         <svg
             width="auto"
             height="auto"

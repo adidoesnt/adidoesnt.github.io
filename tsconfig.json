@@ -12,7 +12,8 @@
             "@assets": ["assets/index.ts"],
             "@styles/*": ["styles/*"],
             "@constants/*": ["constants/*"],
-            "@content/*": ["content/*"]
+            "@content/*": ["content/*"],
+            "@utils/*": ["utils/*"]
         },
         "jsxImportSource": "react"
     }

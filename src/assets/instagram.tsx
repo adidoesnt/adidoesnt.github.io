@@ -1,14 +1,13 @@
 import { SOCIALS } from '@constants/navigation';
 import instagram from './fallbacks/instagram.png';
+import { isApple } from '@utils/agent';
 const { INSTAGRAM } = SOCIALS;
 
 export const Instagram = () => {
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-
     return (
         <div className="h-[45px] md:h-[60px]">
             <a href={(INSTAGRAM as unknown as string) ?? ''} target="_blank">
-                {isIOS ? (
+                {isApple ? (
                     <img
                         src={instagram.src}
                         alt="Gmail Icon"

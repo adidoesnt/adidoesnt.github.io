@@ -1,14 +1,13 @@
 import { SOCIALS } from '@constants/navigation';
 import github from './fallbacks/github.png';
+import { isApple } from '@utils/agent';
 const { GITHUB } = SOCIALS;
 
 export const Github = () => {
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-
     return (
         <div className="h-[45px] md:h-[60px]">
             <a href={(GITHUB as unknown as string) ?? ''} target="_blank">
-                {isIOS ? (
+                {isApple ? (
                     <img
                         src={github.src}
                         alt="Github Icon"

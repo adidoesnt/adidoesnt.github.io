@@ -1,9 +1,8 @@
+import { isApple } from '@utils/agent';
 import hamburger from './fallbacks/hamburger.png';
 
 export const Hamburger = () => {
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-
-    return isIOS ? (
+    return isApple ? (
         <img
             src={hamburger.src}
             alt="Hamburger Menu Icon"
