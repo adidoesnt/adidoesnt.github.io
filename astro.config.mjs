@@ -15,5 +15,6 @@ export default defineConfig({
     build: {
       client: './dist/client',
       server: "./dist/server"
-    }
+    },
+    site: 'https://www.adityabanerjee.me'
 });
