@@ -1,3 +1,5 @@
+export const prerender = false;
+
 import type { AstroGlobal } from 'astro';
 
 const { GH_TOKEN, GH_USERNAME, GH_REPOS_PER_PAGE } = process.env;
