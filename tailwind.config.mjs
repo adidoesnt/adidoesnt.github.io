@@ -6,6 +6,8 @@ export default {
             colors: {
                 navy: "#161923",
                 white: "#FFFFFF",
+                blue: "#2D3748",
+                wisp: "#EEF2F7"
             },
             fontFamily: {
                 inter: ["Inter", "sans-serif"],

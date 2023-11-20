@@ -3,7 +3,13 @@ import mdx from "@astrojs/mdx";
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 
+import node from "@astrojs/node";
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [mdx(), tailwind(), react()]
+  output: 'hybrid',
+  integrations: [mdx(), tailwind(), react()],
+  adapter: node({
+    mode: "standalone"
+  })
 });

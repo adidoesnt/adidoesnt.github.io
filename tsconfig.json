@@ -8,6 +8,7 @@
             "@components/*": ["components/*"],
             "@layouts/*": ["layouts/*"],
             "@pages/*": ["pages/*"],
+            "@api/*": ["pages/api/*"],
             "@assets/*": ["assets/*"],
             "@assets": ["assets/index.ts"],
             "@styles/*": ["styles/*"],

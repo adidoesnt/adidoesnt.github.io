@@ -2,6 +2,7 @@ export enum PAGE {
     HOME = 'home',
     ABOUT = 'about',
     RESUME = 'resume',
+    PROJECTS = 'projects',
     // BLOG = 'blog',
     ACK = 'acknowledgements'
 }
@@ -22,9 +23,15 @@ export enum SOCIALS {
     LINKEDIN = PUBLIC_LINKEDIN_URL
 }
 
-const { HOME, ABOUT, RESUME, /*BLOG,*/ ACK } = PAGE;
+const { HOME, ABOUT, RESUME, /*BLOG,*/ ACK, PROJECTS } = PAGE;
 
-export const pages: Array<PAGE> = [HOME, ABOUT, RESUME, /*BLOG,*/ ACK];
+export const pages: Array<PAGE> = [
+    HOME,
+    ABOUT,
+    RESUME,
+    /*BLOG,*/ PROJECTS,
+    ACK
+];
 
 export const getName = (page: PAGE) => {
     return `${page.charAt(0).toUpperCase()}${page.slice(1, page.length)}`;
