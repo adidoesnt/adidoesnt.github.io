@@ -11,5 +11,9 @@ export default defineConfig({
     adapter: node({
         mode: 'standalone'
     }),
-    base: '/'
+    base: "/",
+    build: {
+      client: './client',
+      server: "./sever"
+    }
 });
