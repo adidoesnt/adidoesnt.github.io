@@ -4,10 +4,10 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "bunx --bun astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro",
+    "start": "bunx --bun astro dev",
+    "build": "bunx --bun astro check && bunx --bun astro build",
+    "preview": "bunx --bun astro preview",
+    "astro": "bunx --bun astro",
     "format": "prettier --write --plugin=prettier-plugin-astro '**/*.{js,jsx,ts,tsx,css,scss,json,md,astro}'"
   },
   "dependencies": {
