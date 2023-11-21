@@ -14,7 +14,7 @@ const albums = (await readableStreamToJSON(
 <Layout title="Aditya Banerjee - About">
     <div class="flex flex-col w-full h-full items-center justify-center">
         <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full px-[12.5%] max-h-[57.5vh] lg:max-h-[50vh] overflow-y-auto"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full px-[12.5%] max-h-[57.5vh] overflow-y-auto"
         >
             {
                 albums?.map((album: Album) => {

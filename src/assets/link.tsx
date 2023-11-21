@@ -10,11 +10,7 @@ export const Link = ({ href, className }: LinkProps) => {
     return (
         <a target="_blank" href={href} className={className}>
             {isApple ? (
-                <img
-                    src={link.src}
-                    alt="Gmail Icon"
-                    className="w-8 h-8"
-                />
+                <img src={link.src} alt="Gmail Icon" className="w-8 h-8" />
             ) : (
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
