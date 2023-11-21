@@ -28,7 +28,7 @@ export const Modal = ({
 
     return isOpen ? (
         <div className="flex fixed flex-col inset-0 items-center justify-center z-10 bg-[#161923] bg-opacity-75 backdrop-blur-md text-center">
-            <div className="flex flex-col gap-4 p-4 rounded-md bg-blue">
+            <div className="flex flex-col gap-4 p-4 rounded-md bg-blue max-h-[90dvh] overflow-y-auto">
                 <button
                     id="closeModalButton"
                     onClick={handleClick}
