@@ -17,6 +17,7 @@ export type Track = {
     external_urls: {
         spotify: string;
     };
+    duration_ms: number;
 };
 
 export type Album = {
@@ -98,13 +99,14 @@ const getTracks = async (token?: string, albumId?: string) => {
         const { data } = response;
         const { items } = data;
         const tracks = items?.map((item: Track) => {
-            const { id, name, track_number, preview_url, external_urls } = item;
+            const { id, name, track_number, preview_url, external_urls, duration_ms } = item;
             return {
                 id,
                 name,
                 track_number,
                 preview_url,
-                external_urls
+                external_urls,
+                duration_ms
             };
         });
         return tracks;
