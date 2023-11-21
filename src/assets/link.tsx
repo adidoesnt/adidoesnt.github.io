@@ -13,9 +13,7 @@ export const Link = ({ href, className }: LinkProps) => {
                 <img
                     src={link.src}
                     alt="Gmail Icon"
-                    className="h-[45px] md:h-[60px]"
-                    width="auto"
-                    height="auto"
+                    className="w-8 h-8"
                 />
             ) : (
                 <svg
