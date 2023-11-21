@@ -1,9 +1,14 @@
 ---
 import Layout from '@layouts/index.astro';
-import getMusic from '@api/getMusic';
+import { Album as AlbumCover } from '@components/album';
+import getMusic, { type Album } from '@api/getMusic';
+import { readableStreamToJSON } from 'bun';
 
 const response = await getMusic(Astro);
-console.log(response);
+const stream = response.body;
+const albums = (await readableStreamToJSON(
+    stream as ReadableStream
+)) as Array<Album>;
 ---
 
 <Layout title="Aditya Banerjee - About">
@@ -11,7 +16,20 @@ console.log(response);
         <div
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full px-[12.5%] max-h-[57.5vh] lg:max-h-[50vh] overflow-y-auto"
         >
-            Placeholder
+            {
+                albums?.map((album: Album) => {
+                    const { name, external_urls, images, release_date } = album;
+                    return (
+                        <AlbumCover
+                            client:only="react"
+                            name={name}
+                            external_urls={external_urls}
+                            release_date={release_date}
+                            images={images}
+                        />
+                    );
+                })
+            }
         </div>
     </div>
 </Layout>
