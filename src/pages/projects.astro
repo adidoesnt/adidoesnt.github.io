@@ -4,7 +4,7 @@ import Layout from '@layouts/index.astro';
 import { Project } from '@components/project';
 import { readableStreamToJSON } from 'bun';
 
-let response = await getProjects(Astro);
+const response = await getProjects(Astro);
 const stream = response.body;
 const repos = (await readableStreamToJSON(
     stream as ReadableStream

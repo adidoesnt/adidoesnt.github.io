@@ -4,7 +4,8 @@ export enum PAGE {
     RESUME = 'resume',
     PROJECTS = 'projects',
     // BLOG = 'blog',
-    ACK = 'acknowledgements'
+    ACK = 'acknowledgements',
+    MUSIC = 'music'
 }
 
 const {
@@ -23,13 +24,14 @@ export enum SOCIALS {
     LINKEDIN = PUBLIC_LINKEDIN_URL
 }
 
-const { HOME, ABOUT, RESUME, /*BLOG,*/ ACK, PROJECTS } = PAGE;
+const { HOME, ABOUT, RESUME, /*BLOG,*/ ACK, PROJECTS, MUSIC } = PAGE;
 
 export const pages: Array<PAGE> = [
     HOME,
     ABOUT,
     RESUME,
     /*BLOG,*/ PROJECTS,
+    MUSIC,
     ACK
 ];
 
