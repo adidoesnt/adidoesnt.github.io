@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "bunx --bun astro dev",
     "start": "bunx --bun astro dev",
-    "build": "bunx --bun astro check && bunx --bun astro build",
-    "build:prod": "npm install -g bun && bun run build",
+    "install-bun": "npm install -g bun",
+    "build": "npm run install-bun && bunx --bun astro check && bunx --bun astro build",
     "preview": "bunx --bun astro preview",
     "astro": "bunx --bun astro",
     "format": "prettier --write --plugin=prettier-plugin-astro '**/*.{js,jsx,ts,tsx,css,scss,json,md,astro}'"
