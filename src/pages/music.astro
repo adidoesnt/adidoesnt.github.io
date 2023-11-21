@@ -1,10 +1,11 @@
 ---
 import Layout from '@layouts/index.astro';
 import { Album as AlbumCover } from '@components/album';
-import getMusic, { type Album } from '@api/getMusic';
+import { Modal as TrackModal } from '@components/modal';
+import getAlbums, { type Album } from '@pages/api/getAlbums';
 import { readableStreamToJSON } from 'bun';
 
-const response = await getMusic(Astro);
+const response = await getAlbums(Astro);
 const stream = response.body;
 const albums = (await readableStreamToJSON(
     stream as ReadableStream
@@ -18,15 +19,24 @@ const albums = (await readableStreamToJSON(
         >
             {
                 albums?.map((album: Album) => {
-                    const { name, external_urls, images, release_date } = album;
+                    const {
+                        name,
+                        external_urls,
+                        images,
+                        release_date,
+                        tracks
+                    } = album;
                     return (
-                        <AlbumCover
-                            client:only="react"
-                            name={name}
-                            external_urls={external_urls}
-                            release_date={release_date}
-                            images={images}
-                        />
+                        <>
+                            <AlbumCover
+                                client:only="react"
+                                name={name}
+                                external_urls={external_urls}
+                                release_date={release_date}
+                                images={images}
+                                tracks={tracks}
+                            />
+                        </>
                     );
                 })
             }

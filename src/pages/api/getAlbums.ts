@@ -9,6 +9,16 @@ export type CoverImage = {
     width: number;
 };
 
+export type Track = {
+    id: string;
+    name: string;
+    track_number: number;
+    preview_url: string;
+    external_urls: {
+        spotify: string;
+    };
+};
+
 export type Album = {
     id: string;
     name: string;
@@ -18,6 +28,7 @@ export type Album = {
     };
     uri: string;
     images: Array<CoverImage>;
+    tracks?: Array<Track>;
 };
 
 const {
@@ -32,7 +43,7 @@ const clientSecret = SPOTIFY_CLIENT_SECRET ?? '';
 const artistId = SPOTIFY_ARTIST_ID ?? '';
 const tokenEndpoint = SPOTIFY_TOKEN_ENDPOINT ?? '';
 
-const getToken = async () => {
+export const getToken = async () => {
     const credentials = Buffer.from(`${clientId}:${clientSecret}`).toString(
         'base64'
     );
@@ -75,20 +86,52 @@ const getAlbums = async (token?: string) => {
     }
 };
 
+const getTracks = async (token?: string, albumId?: string) => {
+    if (!token || !albumId) return;
+    const uri = `https://api.spotify.com/v1/albums/${albumId}/tracks`;
+    try {
+        const response = await axios.get(uri, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        });
+        const { data } = response;
+        const { items } = data;
+        const tracks = items?.map((item: Track) => {
+            const { id, name, track_number, preview_url, external_urls } = item;
+            return {
+                id,
+                name,
+                track_number,
+                preview_url,
+                external_urls
+            };
+        });
+        return tracks;
+    } catch (error) {
+        console.error(error);
+    }
+};
+
 const GET = async (_: Readonly<AstroGlobal>) => {
     const token = await getToken();
     const data = (await getAlbums(token)) as Array<Album>;
-    const albums = data.map((album) => {
-        const { id, name, uri, release_date, external_urls, images } = album;
-        return {
-            id,
-            name,
-            uri,
-            release_date,
-            external_urls,
-            images
-        };
-    }) as Array<Album>;
+    const albums = (await Promise.all(
+        data.map(async (album) => {
+            const { id, name, uri, release_date, external_urls, images } =
+                album;
+            const tracks = await getTracks(token, id);
+            return {
+                id,
+                name,
+                uri,
+                release_date,
+                external_urls,
+                images,
+                tracks
+            };
+        })
+    )) as Array<Album>;
     return new Response(JSON.stringify(albums), {
         status: 200
     });
