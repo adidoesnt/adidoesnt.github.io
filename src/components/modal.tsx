@@ -1,5 +1,5 @@
 import type { Album, Track } from '@pages/api/getAlbums';
-import { useCallback, useMemo } from 'react';
+import { useCallback } from 'react';
 
 export type ModalProps = Partial<Album> & {
     isOpen: boolean;
