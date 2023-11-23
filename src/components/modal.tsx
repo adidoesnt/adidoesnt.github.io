@@ -51,7 +51,7 @@ export const Modal = ({
                     </a>
                 </div>
                 <hr />
-                <div className="flex flex-col gap-1 text-left px-4">
+                <div className="flex flex-col gap-1 text-left">
                     {tracks?.map((track: Track) => {
                         const {
                             name,
