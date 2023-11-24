@@ -8,6 +8,26 @@ title: Experience
 
 <br />
 
+**Aug 2022 - Present**<br />
+_Activate Interactive, Singapore_<br />
+Senior Programmer Analyst<br />
+
+-   Worked on CRISP, an automated cloud resource provisioning platform
+-   Collaborated extensively with Amazon Web Services and the Ministry of Manpower during development
+-   Authored the user and notification microservices
+-   Authored and executed comprehensive unit tests for the user microservice
+-   Researched and facilitated blue/green deployment
+-   Researched and facilitated database automation via shell scripts<br /><br />
+
+**Feb 2023 - July 2023**<br />
+_FNSHR, Singapore_<br />
+Chief Technical Officer
+
+-   Co-founded productivity and task management startup FNSHR
+-   Developed telegram bot MVP to facilitate initial market validation
+-   Developed PWA as second MVP to address findings from previous round
+-   Pitched and finished second at NUS N-House Pitch Night, securing a green lane to the VIP grant <br /><br />
+
 **Jan 2022 - Feb 2023**<br />
 _ByondXR, Israel_<br />
 Research and Development Intern(Jan 2022 - June 2022)<br />
