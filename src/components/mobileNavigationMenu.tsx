@@ -14,13 +14,13 @@ export const MobileNavigationMenu = ({
     return isOpen ? (
         <div
             id="mobileNav"
-            className="flex fixed flex-col inset-0 items-center justify-center z-10 bg-[#161923] bg-opacity-75 backdrop-blur-md text-center"
+            className="flex fixed flex-col inset-0 items-center justify-center z-10 bg-[#161923] bg-opacity-75 backdrop-blur-md text-center text-lg"
         >
-            {pages.map((page, index) => {
+            {pages.map((page) => {
                 const name = getName(page);
                 const path = getPath(page);
                 return (
-                    <a key={index} href={path}>
+                    <a key={name} href={path}>
                         <span>{name}</span>
                     </a>
                 );
