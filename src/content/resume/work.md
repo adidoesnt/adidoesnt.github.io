@@ -8,7 +8,7 @@ title: Experience
 
 <br />
 
-**Aug 2022 - Present**<br />
+**Aug 2023 - Present**<br />
 _Activate Interactive, Singapore_<br />
 Senior Programmer Analyst<br />
 
